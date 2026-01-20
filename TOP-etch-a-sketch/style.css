@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.grid-row {
+    display: flex;
+}
+
+.grid-item {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+}

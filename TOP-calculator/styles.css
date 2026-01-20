@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#container {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+.items {
+    display: flex;
+    color: white;
+}
+
+#display {
+    flex: 3;
+    background-color: black;
+    border: 1px solid black;
+
+    text-align: right;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+button {
+    flex: 1;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+button.number {
+    background-color: darkgray;
+}
+
+button.symbol {
+    background-color: darkgray;
+}
+
+button.symbolClear {
+    background-color: red;
+}
+
+button.symbolEqual {
+    background-color: blue;
+}
+
+button:hover {
+    filter: brightness(0.7);
+}
