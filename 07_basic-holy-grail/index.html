@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="sidebar">Sidebar</div>
+            <div id="header">Header</div>
+            <div id="nav">Nav</div>
+            <div id="article">Article
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut est felis. Integer orci eros, suscipit
+                    ut nibh eget, fringilla posuere nulla. Donec ut tempor nibh, et varius lectus.</p>
+                <p>Aenean id sodales
+                    purus. Quisque auctor nulla vitae ante maximus feugiat. Ut vel lectus in sapien consequat posuere et
+                    eu tellus. Nunc tincidunt nunc eu arcu venenatis, quis convallis sem molestie.</p>
+                <p>Nam augue nulla,
+                    blandit id tincidunt vitae, accumsan id mauris. In porta facilisis leo, et dictum nisi cursus vel.
+                    Morbi hendrerit diam nisi, non fermentum metus condimentum et. Donec sit amet porttitor mi.</p>
+            </div>
+            <div id="footer">Footer</div>
+        </div>
+    </body>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+
+            color: white;
+            font-size: 1.5rem;
+            font-family: system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                'Segoe UI',
+                Roboto,
+                Oxygen,
+                Ubuntu,
+                Cantarell,
+                'Open Sans',
+                'Helvetica Neue',
+                sans-serif;
+            font-weight: bold;
+            text-align: center;
+
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 1fr 5fr 1fr;
+            grid-template-areas: "header header header header"
+                "sidebar nav nav nav"
+                "sidebar article article article"
+                "footer footer footer footer"
+        }
+
+        .container>div {
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        #sidebar {
+            background-color: #005B94;
+            grid-area: sidebar;
+        }
+
+        #header {
+            background-color: #006157;
+            grid-area: header;
+        }
+
+        #nav {
+            background-color: #642CDE;
+            grid-area: nav;
+        }
+
+        #article {
+            background-color: #7E1DC3;
+            grid-area: article;
+        }
+
+        #article p {
+            font-size: 1.25rem;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        #footer {
+            background-color: #393F4D;
+            grid-area: footer;
+        }
+    </style>
+
+</html>
