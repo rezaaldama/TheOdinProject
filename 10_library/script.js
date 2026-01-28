@@ -1,21 +1,19 @@
 const myLibrary = new Array();
 
-function Book(title, author, pages, status) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor");
+class Book {
+    constructor (title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
     }
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-}
+};
 
 // Book.prototype.info = function () {
 //     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`
 // }
 
 const bookContainer = document.querySelector('#book-container');
-
 bookContainer.addEventListener('click', (e) => {
     const bookCard = e.target.closest('.book');
     if (!bookCard) return;
@@ -36,7 +34,6 @@ bookContainer.addEventListener('click', (e) => {
 
 const openBtn = document.querySelector("#openDialogBtn");
 const dialog = document.querySelector("#bookDialog");
-
 openBtn.addEventListener("click", () => {
     dialog.showModal();
 
@@ -48,12 +45,11 @@ openBtn.addEventListener("click", () => {
     const topPos = btnRect.top - modalHeight - 10;
     const leftPos = btnRect.left - modalWidth + 20;
 
-    dialog.style.top = `${topPos}px`;
-    dialog.style.left = `${leftPos}px`;
+    dialog.style.top = `${ topPos }px`;
+    dialog.style.left = `${ leftPos }px`;
 });
 
 const bookForm = document.querySelector('#bookForm');
-
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -81,13 +77,13 @@ function displayBooks() {
 
         bookDiv.innerHTML = `
             <div class="book-info">
-                <div class="title">${book.title}</div>
-                <div class="author">by ${book.author}</div>
+                <div class="title">${ book.title }</div>
+                <div class="author">by ${ book.author }</div>
             </div>
             <div class="book-meta">
-                <div class="pages">${book.pages} pages</div>
-                <button class="status-btn ${book.isRead ? 'read' : 'not-read'}">
-                    ${book.isRead ? 'Read' : 'Not Read'}
+                <div class="pages">${ book.pages } pages</div>
+                <button class="status-btn ${ book.isRead ? 'read' : 'not-read' }">
+                    ${ book.isRead ? 'Read' : 'Not Read' }
                 </button>
                 <button class="remove-btn">
                     <span class="material-icons">delete_outline</span>
@@ -104,13 +100,13 @@ function addBookToLibrary(title, author, pages, isRead) {
 
     bookDiv.innerHTML = `
     <div class="book-info">
-        <div class="title">${title}</div>
-        <div class="author">by ${author}</div>
+        <div class="title">${ title }</div>
+        <div class="author">by ${ author }</div>
     </div>
     <div class="book-meta">
-        <div class="pages">${pages} pages</div>
-        <button class="status-btn ${isRead ? 'read' : 'not-read'}">
-            ${isRead ? 'Read' : 'Not Read'}
+        <div class="pages">${ pages } pages</div>
+        <button class="status-btn ${ isRead ? 'read' : 'not-read' }">
+            ${ isRead ? 'Read' : 'Not Read' }
         </button>
         <button class="remove-btn">
             <span class="material-icons">delete_outline</span>
