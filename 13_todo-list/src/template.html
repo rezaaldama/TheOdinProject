@@ -3,7 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo List</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>Projects</h1>
+          <button class="btn-add-project" id="addProjectBtn">
+            + New Project
+          </button>
+          <!-- Project list -->
+          <ul class="project-list" id="projectList">
+            <!-- Add projects here -->
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <div class="content-header">
+          <h2 class="project-title" id="projectTitle">Project Title</h2>
+          <button class="btn-add-todo" id="addTodoBtn">+ New Todo</button>
+        </div>
+
+        <div class="todo-list" id="todoList">
+          <!-- Add todos here -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal for adding or editing todos -->
+    <div class="modal" id="todoModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Add New Todo</h3>
+          <button class="close-btn" id="closeModal">&times;</button>
+        </div>
+        <form id="todoForm">
+          <div class="form-group">
+            <label for="todoTitle">Title *</label>
+            <input type="text" id="todoTitle" required />
+          </div>
+
+          <div class="form-group">
+            <label for="todoDescription">Description</label>
+            <textarea id="todoDescription" rows="3"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="todoDueDate">Due Date</label>
+              <input type="date" id="todoDueDate" />
+            </div>
+
+            <div class="form-group">
+              <label for="todoPriority">Priority</label>
+              <select id="todoPriority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="todoNotes">Notes</label>
+              <textarea id="todoNotes" rows="2"></textarea>
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" class="btn-cancel" id="cancelBtn">
+                Cancel
+              </button>
+              <button type="submit" class="btn-submit">Save Todo</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

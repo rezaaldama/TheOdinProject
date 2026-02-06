@@ -1,10 +1,10 @@
 export class Todo {
   constructor(
     title,
-    description = "",
-    dueDate = "",
-    priority = "medium",
-    notes = "",
+    description = '',
+    dueDate = '',
+    priority = 'medium',
+    notes = '',
   ) {
     this.id =
       Date.now().toString() + Math.random().toString(36).substring(2, 9);
@@ -39,12 +39,16 @@ export class Todo {
   }
 
   updateTodo(updates) {
-    if (updates.title !== undefined) this.title = updates.title;
-    if (updates.description !== undefined)
+    if (updates.title !== undefined && updates.title !== null)
+      this.title = updates.title;
+    if (updates.description !== undefined && updates.description !== null)
       this.description = updates.description;
-    if (updates.dueDate !== undefined) this.dueDate = updates.dueDate;
-    if (updates.priorty != undefined) this.priority = updates.priority;
-    if (updates.notes != undefined) this.notes = updates.notes;
+    if (updates.dueDate !== undefined && updates.dueDate !== null)
+      this.dueDate = updates.dueDate;
+    if (updates.priority !== undefined && updates.priority !== null)
+      this.priority = updates.priority;
+    if (updates.notes !== undefined && updates.notes !== null)
+      this.notes = updates.notes;
   }
 
   toJSON() {
