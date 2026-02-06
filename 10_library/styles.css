@@ -1,214 +1,223 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 :root {
-    --google-blue: #1a73e8;
-    --google-blue-hover: #185abc;
-    --google-grey: #5f6368;
-    --bg-color: #f8f9fa;
-    --default-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.12);
-    --default-padding: 1.5rem 2rem;
+  --google-blue: #1a73e8;
+  --google-blue-hover: #185abc;
+  --google-grey: #5f6368;
+  --bg-color: #f8f9fa;
+  --default-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.12);
+  --default-padding: 1.5rem 2rem;
 }
 
 #container {
-    width: 100%;
-    max-width: 100vw;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    color: white;
-    background-color: var(--google-blue);
-    box-shadow: var(--default-shadow);
+  color: white;
+  background-color: var(--google-blue);
+  box-shadow: var(--default-shadow);
 
-    max-width: 100%;
-    padding: var(--default-padding);
-    position: sticky;
-    top: 0;
+  max-width: 100%;
+  padding: var(--default-padding);
+  position: sticky;
+  top: 0;
 }
 
 .book {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
 
-    border-bottom: 1px solid #f1f3f4;
+  border-bottom: 1px solid #f1f3f4;
 }
 
 .book:hover {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 .book-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .author {
-    font-size: 0.9rem;
-    color: var(--google-grey);
+  font-size: 0.9rem;
+  color: var(--google-grey);
 }
 
 .book-meta {
-    color: var(--google-grey);
-    font-size: 0.9rem;
+  color: var(--google-grey);
+  font-size: 0.9rem;
 
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .remove-btn {
-    color: var(--google-grey);
+  color: var(--google-grey);
 
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 
-    padding: 1rem;
-    border-radius: 999px;
+  padding: 1rem;
+  border-radius: 999px;
 
-    display: flex;
+  display: flex;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .remove-btn:hover {
-    background-color: #f1f3f4;
-    color: #d93025;
+  background-color: #f1f3f4;
+  color: #d93025;
 }
 
 .status-btn {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 
-    border: none;
-    padding: 6px 16px;
-    border-radius: 999px;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 999px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .status-btn.read {
-    background-color: #e8f0fe;
-    color: #1967d2;
+  background-color: #e8f0fe;
+  color: #1967d2;
 }
 
 .status-btn.read:hover {
-    background-color: #d2e3fc;
+  background-color: #d2e3fc;
 }
 
 .status-btn.not-read {
-    background-color: #f1f3f4;
-    color: var(--google-grey);
+  background-color: #f1f3f4;
+  color: var(--google-grey);
 }
 
 .status-btn.not-read:hover {
-    background-color: #e8eaed;
+  background-color: #e8eaed;
 }
 
 .modal {
-    position: absolute;
+  position: absolute;
 
-    border: none;
-    border-radius: 28px;
+  border: none;
+  border-radius: 28px;
 
-    padding: 1.5rem;
-    width: 300px;
+  padding: 1.5rem;
+  width: 300px;
 
-    box-shadow: var(--default-shadow);
+  box-shadow: var(--default-shadow);
 
-    z-index: 999;
+  z-index: 999;
 }
 
 .input-group input {
-    font-size: 1rem;
+  font-size: 1rem;
 
-    padding: 0.75rem;
-    margin: 0.5rem 0;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
 
-    border: 1px solid #dadce0;
-    border-radius: 4px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
 }
 
 .modal-actions {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
-
 
 /* Cancel button */
 .btn-flat {
-    background: none;
-    color: var(--google-blue);
-    border: none;
+  background: none;
+  color: var(--google-blue);
+  border: none;
 
-    padding: 10px 24px;
+  padding: 10px 24px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* Add to library button */
 .btn-filled {
-    background: var(--google-blue);
-    color: white;
-    border: none;
+  background: var(--google-blue);
+  color: white;
+  border: none;
 
-    padding: 10px 24px;
-    border-radius: 20px;
+  padding: 10px 24px;
+  border-radius: 20px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .fab {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
 
-    width: 64px;
-    height: 64px;
-    border-radius: 999px;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
 
-    background-color: #d3e3fd;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14),
-        0 1px 14px 0 rgba(0, 0, 0, 0.12);
+  background-color: #d3e3fd;
+  border: none;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.14),
+    0 1px 14px 0 rgba(0, 0, 0, 0.12);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    font-size: 32px;
+  font-size: 32px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .fab:hover {
-    transform: scale(1.10);
+  transform: scale(1.1);
+}
+
+input:invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+input:valid {
+  border: 2px solid green;
 }

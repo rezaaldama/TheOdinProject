@@ -1,58 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
 
-        <title>My Library</title>
+    <link rel="stylesheet" href="styles.css" />
 
-        <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script.js" defer></script>
+  </head>
 
-        <script src="script.js" defer></script>
-    </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>My Library</h1>
+        <div class="search-icon-wrapper">
+          <span class="material-icons">search</span>
+        </div>
+      </header>
 
-    <body>
-        <div id="container">
-            <header>
-                <h1>My Library</h1>
-                <div class="search-icon-wrapper">
-                    <span class="material-icons">search</span>
-                </div>
-            </header>
+      <main id="book-container"></main>
+    </div>
 
-            <main id="book-container"></main>
+    <button class="fab" id="openDialogBtn">+</button>
+
+    <dialog id="bookDialog" class="modal">
+      <form method="dialog" id="bookForm">
+        <h2>Add New Book</h2>
+        <div class="input-group">
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="text" id="author" placeholder="Author" required />
+          <input type="number" id="pages" placeholder="Pages" required />
         </div>
 
-        <button class="fab" id="openDialogBtn">+</button>
+        <label class="checkbox-container">
+          <input type="checkbox" id="isRead" />
+          <span class="checkmark"></span>
+          I have read this book
+        </label>
 
-        <dialog id="bookDialog" class="modal">
-            <form method="dialog" id="bookForm">
-                <h2>Add New Book</h2>
-                <div class="input-group">
-                    <input type="text" id="title" placeholder="Title" required>
-                    <input type="text" id="author" placeholder="Author" required>
-                    <input type="number" id="pages" placeholder="Pages" required>
-                </div>
-
-                <label class="checkbox-container">
-                    <input type="checkbox" id="isRead">
-                    <span class="checkmark"></span>
-                    I have read this book
-                </label>
-
-                <div class="modal-actions">
-                    <button type="button" id="cancelBtn" class="btn-flat">Cancel</button>
-                    <button type="submit" id="submitBtn" class="btn-filled">Add to Library</button>
-                </div>
-            </form>
-        </dialog>
-
-    </body>
-
+        <div class="modal-actions">
+          <button type="button" id="cancelBtn" class="btn-flat">Cancel</button>
+          <button type="submit" id="submitBtn" class="btn-filled">
+            Add to Library
+          </button>
+        </div>
+      </form>
+    </dialog>
+  </body>
 </html>
