@@ -15,9 +15,7 @@ const iconMap = {
 
 const getWeatherData = async (city) => {
   city = city.toLowerCase();
-  const url = `https://weather.visualcrossing.com/
-               VisualCrossingWebServices/rest/services/timeline/${city}?
-               unitGroup=metric&key=${WEATHER_API_KEY}`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${WEATHER_API_KEY}`;
 
   try {
     const response = await fetch(url);
