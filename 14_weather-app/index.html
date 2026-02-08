@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search-box">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Enter city (e.g. London)"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div id="weather-display">
+        <h2 id="location">Loading...</h2>
+        <div id="icon" style="font-size: 4rem">☁️</div>
+        <div class="temp"><span id="temp-val">--</span>°C</div>
+        <div class="desc" id="condition-text">Please search for a city</div>
+
+        <div class="details">
+          <div class="info-bit">
+            <small>Feels Like</small>
+            <div id="feels-like">--</div>
+          </div>
+          <div class="info-bit">
+            <small>Humidity</small>
+            <div id="humidity">--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
